@@ -18,18 +18,18 @@ const StoreProvider = ({ children }: any) => {
   const initialPath = [
     {
       type: "M",
-      x: 0,
-      y: 0,
-    },
-    {
-      type: "L",
-      x: 100,
-      y: 100,
+      x: 50,
+      y: 50,
     },
     {
       type: "L",
       x: 200,
       y: 200,
+    },
+    {
+      type: "L",
+      x: 400,
+      y: 50,
     },
     {
       type: "Z",
