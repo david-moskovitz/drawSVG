@@ -71,21 +71,25 @@ const PathEditor = () => {
             {path.map((p: any, i: number) => (
               <>
                 <ColorWord color="text-green-500" word={p.type} />
-                <AutosizeInput
-                  value={p?.x}
-                  type="number"
-                  onChange={(e) => setPath(e.target.value, "x", i)}
-                  className="text-green-500 just-to-remove-the-bg"
-                />
-                <ColorWord color="text-green-500" word="," />
+                {p.type === "Z" ? null : (
+                  <>
+                    <AutosizeInput
+                      value={p?.x}
+                      type="number"
+                      onChange={(e) => setPath(e.target.value, "x", i)}
+                      className="text-green-500 just-to-remove-the-bg"
+                    />
+                    <ColorWord color="text-green-500" word="," />
 
-                <AutosizeInput
-                  value={p?.y}
-                  type="number"
-                  onChange={(e) => setPath(e.target.value, "y", i)}
-                  className="text-green-500 just-to-remove-the-bg"
-                />
-                <ColorWord color="text-green-500" word=" " />
+                    <AutosizeInput
+                      value={p?.y}
+                      type="number"
+                      onChange={(e) => setPath(e.target.value, "y", i)}
+                      className="text-green-500 just-to-remove-the-bg"
+                    />
+                    <ColorWord color="text-green-500" word=" " />
+                  </>
+                )}
               </>
             ))}
             <ColorWord color="text-green-500" word='"' />
