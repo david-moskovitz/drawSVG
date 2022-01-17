@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.just-to-remove-the-bg > input {
+  background: none;
+  color: inherit;
+  border: none;
+  border-radius: 4px;
+  outline: 0.5px solid lightgray;
+}
+.just-to-remove-the-bg > input:focus {
+  outline: 0.5px solid lightgray;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 12px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+input[type="color"]:focus {
+  outline: 1px solid lightgray;
+  border-radius: 4px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper:focus {
+  outline: 1px solid lightgray;
+  border-radius: 4px;
+}
+input[type="color"]::-webkit-color-swatch:focus {
+  outline: 1px solid lightgray;
+  border-radius: 4px;
+}
